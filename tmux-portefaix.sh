@@ -15,8 +15,12 @@ function tmux_portefaix {
     tmux new-session -s $SESSION -n Lam -d
     tmux new-window -n "dot"
     tmux send-keys -t $SESSION "cd $DIR/dotfiles/" C-m
+    tmux new-window -n "Hestia"
+    tmux send-keys -t $SESSION "cd $DIR/hestia/" C-m
     tmux new-window -n "Hyperion"
     tmux send-keys -t $SESSION "cd $DIR/hyperion" C-m
+    tmux new-window -n "Cerbere"
+    tmux send-keys -t $SESSION "cd $DIR/cerbere" C-m
     tmux new-window -n "Hyperion-Services"
     tmux send-keys -t $SESSION "cd $DIR/hyperion-services" C-m
     tmux new-window -n "Base"
