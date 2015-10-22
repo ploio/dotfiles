@@ -5,7 +5,7 @@ SESSION="portefaix"
 
 echo $#
 if [ $# -eq 0 ]; then
-	echo "Usage: $0 <directory>"
+	echo "Usage: `basename $0` <directory>"
 	exit 0
 fi
 
@@ -21,6 +21,10 @@ function tmux_portefaix {
     tmux send-keys -t $SESSION "cd $DIR/hyperion" C-m
     tmux new-window -n "Cerbere"
     tmux send-keys -t $SESSION "cd $DIR/cerbere" C-m
+    tmux new-window -n "Warhol"
+    tmux send-keys -t $SESSION "cd $DIR/warhol" C-m
+    tmux new-window -n "Cirrus"
+    tmux send-keys -t $SESSION "cd $DIR/cirrus" C-m
     tmux new-window -n "Hyperion-Services"
     tmux send-keys -t $SESSION "cd $DIR/hyperion-services" C-m
     tmux new-window -n "Base"
