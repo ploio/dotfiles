@@ -17,8 +17,10 @@ function tmux_portefaix {
     tmux send-keys -t $SESSION "cd $DIR/dotfiles/" C-m
     tmux new-window -n "Hestia"
     tmux send-keys -t $SESSION "cd $DIR/hestia/" C-m
-    tmux new-window -n "Hyperion"
-    tmux send-keys -t $SESSION "cd $DIR/hyperion" C-m
+    tmux new-window -n "Hyperion-k8s"
+    tmux send-keys -t $SESSION "cd $DIR/hyperion-k8s" C-m
+    tmux new-window -n "Hyperion-nomad"
+    tmux send-keys -t $SESSION "cd $DIR/hyperion-nomad" C-m
     tmux new-window -n "Cerbere"
     tmux send-keys -t $SESSION "cd $DIR/cerbere" C-m
     tmux new-window -n "Warhol"
@@ -27,6 +29,8 @@ function tmux_portefaix {
     tmux send-keys -t $SESSION "cd $DIR/cirrus" C-m
     tmux new-window -n "Hyperion-Services"
     tmux send-keys -t $SESSION "cd $DIR/hyperion-services" C-m
+    tmux new-window -n "Hyperkube"
+    tmux send-keys -t $SESSION "cd $DIR/hyperkube" C-m
     tmux new-window -n "Base"
     tmux send-keys -t $SESSION "cd $DIR/docker-base" C-m
     tmux new-window -n "Elasticsearch"
@@ -37,6 +41,10 @@ function tmux_portefaix {
     tmux send-keys -t $SESSION "cd $DIR/docker-grafana" C-m
     tmux new-window -n "InfluxDB"
     tmux send-keys -t $SESSION "cd $DIR/docker-influxdb" C-m
+    tmux new-window -n "Heka"
+    tmux send-keys -t $SESSION "cd $DIR/docker-heka" C-m
+    tmux new-window -n "Packetbeat"
+    tmux send-keys -t $SESSION "cd $DIR/docker-packetbeat" C-m
 
 	tmux attach-session -t $SESSION
 }
