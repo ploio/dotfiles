@@ -21,14 +21,16 @@ function tmux_portefaix {
     tmux send-keys -t $SESSION "cd $DIR/hyperion-k8s" C-m
     tmux new-window -n "Hyperion-nomad"
     tmux send-keys -t $SESSION "cd $DIR/hyperion-nomad" C-m
+    tmux new-window -n "Hyperion-swarm"
+    tmux send-keys -t $SESSION "cd $DIR/hyperion-swarm" C-m
+    tmux new-window -n "Hyperion-rancher"
+    tmux send-keys -t $SESSION "cd $DIR/hyperion-rancher" C-m
     tmux new-window -n "Cerbere"
     tmux send-keys -t $SESSION "cd $DIR/cerbere" C-m
     tmux new-window -n "Warhol"
     tmux send-keys -t $SESSION "cd $DIR/warhol" C-m
     tmux new-window -n "Cirrus"
     tmux send-keys -t $SESSION "cd $DIR/cirrus" C-m
-    tmux new-window -n "Hyperion-Services"
-    tmux send-keys -t $SESSION "cd $DIR/hyperion-services" C-m
     tmux new-window -n "Hyperkube"
     tmux send-keys -t $SESSION "cd $DIR/hyperkube" C-m
     tmux new-window -n "Base"
@@ -45,6 +47,10 @@ function tmux_portefaix {
     tmux send-keys -t $SESSION "cd $DIR/docker-heka" C-m
     tmux new-window -n "Packetbeat"
     tmux send-keys -t $SESSION "cd $DIR/docker-packetbeat" C-m
+    tmux new-window -n "Clair"
+    tmux send-keys -t $SESSION "cd $DIR/docker-clair" C-m
+    tmux new-window -n "Vault"
+    tmux send-keys -t $SESSION "cd $DIR/docker-vault" C-m
 
 	tmux attach-session -t $SESSION
 }
