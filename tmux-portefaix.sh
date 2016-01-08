@@ -25,6 +25,8 @@ function tmux_portefaix {
     tmux send-keys -t $SESSION "cd $DIR/hyperion-swarm" C-m
     tmux new-window -n "Hyperion-rancher"
     tmux send-keys -t $SESSION "cd $DIR/hyperion-rancher" C-m
+    tmux new-window -n "Hyperion-origin"
+    tmux send-keys -t $SESSION "cd $DIR/hyperion-origin" C-m
     tmux new-window -n "Cerbere"
     tmux send-keys -t $SESSION "cd $DIR/cerbere" C-m
     tmux new-window -n "Warhol"
