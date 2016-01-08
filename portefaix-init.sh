@@ -18,10 +18,27 @@ ERROR_COLOR="\033[31;01m"
 WARN_COLOR="\033[33;01m"
 
 GITHUB="git@github.com:portefaix"
-REPOS="dotfiles hyperion hyperion-services cirrus warhol hyperkube docker-kibana docker-elasticsearch docker-grafana docker-base docker-heka"
+REPOS="dotfiles
+hyperion
+hyperion-k8s
+hyperion-nomad
+hyperion-swarm
+hyperion-rancher
+hyperion-origin
+cirrus
+warhol
+hyperkube
+docker-base
+docker-kibana
+docker-elasticsearch
+docker-grafana
+docker-influxdb
+docker-heka
+docker-vault
+docker-clair"
 
 echo -e "${OK_COLOR}Retrieve Portefaix projects${NO_COLOR}"
 for p in $REPOS; do
     echo -e "${OK_COLOR}-> $p${NO_COLOR}"
-    git clone ${GITHUB}/$p.git
+    echo "git clone ${GITHUB}/$p.git"
 done
